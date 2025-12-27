@@ -1,0 +1,384 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+  min-height: 100vh;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Main container */
+.auth-container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .auth-card {
+    flex-direction: row;
+    min-height: 600px;
+  }
+}
+
+/* Brand section */
+.brand-section {
+  background: linear-gradient(135deg, #ed8936 0%, #e53e3e 100%);
+  color: white;
+  padding: 40px 30px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-content {
+  text-align: center;
+  max-width: 400px;
+}
+
+@media (min-width: 768px) {
+  .brand-content {
+    text-align: left;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .logo-container {
+    justify-content: flex-start;
+  }
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.logo-text {
+  color: #e53e3e;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.brand-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.brand-subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.brand-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+}
+
+.feature-icon {
+  width: 35px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-size: 14px;
+}
+
+/* Form section */
+.form-section {
+  flex: 1;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-container {
+  display: flex;
+  background: #f7fafc;
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 30px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #718096;
+}
+
+.toggle-btn.active {
+  background: white;
+  color: #e53e3e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn:hover:not(.active) {
+  color: #2d3748;
+}
+
+/* Form styles */
+.auth-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #ed8936;
+  box-shadow: 0 0 0 3px rgba(237, 137, 54, 0.1);
+}
+
+.input-with-prefix {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-prefix {
+  position: absolute;
+  left: 12px;
+  color: #718096;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.input-with-prefix .form-input {
+  padding-left: 50px;
+}
+
+.password-hint {
+  font-size: 12px;
+  color: #718096;
+  margin-top: 5px;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  accent-color: #ed8936;
+}
+
+.checkbox-label {
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.forgot-link {
+  font-size: 14px;
+  color: #ed8936;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.terms-link {
+  color: #ed8936;
+  text-decoration: none;
+}
+
+.terms-link:hover {
+  text-decoration: underline;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #ed8936 0%, #e53e3e 100%);
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(237, 137, 54, 0.3);
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.divider-text {
+  padding: 0 15px;
+  font-size: 14px;
+  color: #718096;
+}
+
+/* Social buttons */
+.social-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  border-color: #cbd5e0;
+  background: #f7fafc;
+}
+
+.social-icon {
+  font-weight: bold;
+}
+
+.google-btn .social-icon {
+  color: #db4437;
+}
+
+.twitter-btn .social-icon {
+  color: #1da1f2;
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+  .auth-card {
+    margin: 10px;
+  }
+  
+  .brand-section {
+    padding: 30px 20px;
+  }
+  
+  .form-section {
+    padding: 30px 20px;
+  }
+  
+  .social-buttons {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .forgot-password {
+    align-self: flex-end;
+  }
+}
